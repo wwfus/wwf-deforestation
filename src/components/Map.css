@@ -1,5 +1,58 @@
 .map {
+  position: relative;
   height: 600px;
   width: 100%;
   background-color: lightgrey;
+}
+
+.map__container {
+  height: 100%;
+  width: 100%;
+}
+
+.map__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.map__statistic {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  padding: 15px;
+  background-color: rgba(255,255,255, 0.85);
+}
+
+.map__legend {
+  position: absolute;
+  bottom: 40px;
+  margin: 0 -15px;
+  display: flex;
+  justify-content: left;
+  margin-left: 10px;
+}
+
+.map__legend-item {
+  margin: 0 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.map__legend-item span {
+  display: block;
+  height: 15px;
+  width: 22px;
+  border-radius: 3px;
+  background-color: #A3D6D2;
+  margin-right: 10px;
+}
+
+.map__legend-item:first-of-type span {
+  background-color: #0D6B83;
 }
