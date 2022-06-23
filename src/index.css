@@ -1,7 +1,7 @@
 @import-normalize; /* import normalize.css styles */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"); /* import google fonts */
 
-/* import local fonts */
+/* import fonts */
 
 @font-face {
   font-family: "WWF";
@@ -54,38 +54,9 @@ p {
   font-size: 16px;
 }
 
-/* main header */
+/* app container */
 
-.main-header {
-  background-color: #02252d;
-  padding: 20px;
+.content {
+  display: flex;
+  justify-content: center;
 }
-
-.main-header h1 {
-  color: #ffffff;
-  text-align: center;
-}
-
-.main-header p {
-  color: #ffffff;
-  font-size: 18px;
-  max-width: 860px;
-  margin: 0 auto 60px;
-}
-
-/* content layout */
-
-.main-content {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* map section */
-
-.map-container {
-  height: 600px;
-  width: 100%;
-  background-color: lightgrey;
-}
-

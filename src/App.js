@@ -2,12 +2,9 @@
 import { useState } from 'react';
 
 // import components
+import Header from './components/Header';
 import Nav from './components/Nav';
-
-// import pages
-import EbolaPage from './pages/Ebola';
-import LymePage from './pages/Lyme';
-import MalariaPage from './pages/Malaria';
+import Content from './components/Content';
 
 // import images
 import imgApe from './images/icon-ape.png';
@@ -42,49 +39,11 @@ function App() {
     setActiveTab(id);
   };
 
-  let diseaseContent = (
-    <p>Loading...</p>
-  );
-
-  if (activeTab === 't1') {
-    diseaseContent = <EbolaPage />
-  }
-
-  if (activeTab === 't2') {
-    diseaseContent = <MalariaPage />
-  }
-
-  if (activeTab === 't3') {
-    diseaseContent = <LymePage />
-  }
-
   return (
     <main className='App'>
-      <header className='main-header'>
-        <h1>Disease and Deforestation</h1>
-        <p>
-          Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem
-          ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate
-          iaculis turpis sed dignissim. Aenean pellentesque risus metus, in
-          sollicitudin augue egestas eu. Proin ac finibus tortor. Curabitur
-          faucibus urna enim, vel placerat lacus porta a. Lorem ipsum dolor sit
-          amet.
-        </p>
-      </header>
-
+      <Header />
       <Nav navContent={NAV_CONTENT} activeTab={activeTab} onNavClick={navClickHandler} />
-
-      <section className='main-content'>
-        <div className='layout-column map-column'>
-          <div className='map-container'></div>
-          <div className='map-statistic-overlay'></div>
-          <div className='map-legend'></div>
-        </div>
-
-        <div className='layout-column content-column'>
-          {diseaseContent}
-        </div>
-      </section>
+      <div className='content'><Content activeTab={activeTab} /></div>
     </main>
   );
 }

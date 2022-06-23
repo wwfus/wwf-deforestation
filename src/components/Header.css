@@ -1,0 +1,16 @@
+.main-header {
+  background-color: #02252d;
+  padding: 20px;
+}
+
+.main-header h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.main-header p {
+  color: #ffffff;
+  font-size: 18px;
+  max-width: 860px;
+  margin: 0 auto 60px;
+}

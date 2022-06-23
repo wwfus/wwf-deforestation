@@ -1,4 +1,4 @@
-import IconBlurb from '../components/IconBlurb';
+import Blurb from '../components/Blurb';
 
 // import images
 import imgEbolaChart from '../images/ebola-chart.png';

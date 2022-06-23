@@ -1,0 +1,12 @@
+.main-content {
+  max-width: 1280px;
+  padding: 20px;
+  margin: 0 -10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.layout-column {
+  width: 50%;
+  margin: 0 10px;
+}

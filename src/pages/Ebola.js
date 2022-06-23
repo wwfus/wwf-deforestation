@@ -1,4 +1,4 @@
-import IconBlurb from '../components/IconBlurb';
+import Blurb from '../components/Blurb';
 
 // import images
 import imgEbolaChart from '../images/ebola-chart.png';
@@ -65,25 +65,25 @@ function EbolaPage() {
           iaculis turpis sed dignissim.
         </p>
 
-        <IconBlurb
+        <Blurb
           title='Smallholder farming'
           text='Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim.'
           imgSrc={imgFarming}
           imgAlt='Smallholder farming icon'
         />
-        <IconBlurb
+        <Blurb
           title='Mining operations'
           text='Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim.'
           imgSrc={imgMining}
           imgAlt='Mining operations icon'
         />
-        <IconBlurb
+        <Blurb
           title='Small-scale timber extraction'
           text='Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim.'
           imgSrc={imgTimber}
           imgAlt='Small-scale timber extraction icon'
         />
-        <IconBlurb
+        <Blurb
           title='Fuelwood and charcoal'
           text='Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim.'
           imgSrc={imgFuelwood}
