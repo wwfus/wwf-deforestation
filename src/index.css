@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import-normalize; /* import normalize.css styles */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"); /* import google fonts */
+
+/* import local fonts */
+
+@font-face {
+  font-family: "WWF";
+  src: local("WWF"), url(./fonts/wwf-webfont.woff2) format("woff2");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* base styles */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* typography */
+
+h1,
+h2 {
+  font-family: "WWF", sans-serif;
+  font-weight: normal;
+}
+
+h3,
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #d35c27;
+}
+
+h4 {
+  font-size: 18px;
+  color: #02252d;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* main header */
+
+.main-header {
+  background-color: #02252d;
+  padding: 20px;
+}
+
+.main-header h1 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.main-header p {
+  color: #ffffff;
+  font-size: 18px;
+  max-width: 860px;
+  margin: 0 auto 60px;
+}
+
+/* content layout */
+
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* map section */
+
+.map-container {
+  height: 600px;
+  width: 100%;
+  background-color: lightgrey;
+}
+
+/* navigation */
+
+.main-nav {
+  text-align: center;
+  margin: 60px 20px;
+}
+
+.nav-tab {
+  display: inline-block;
+  list-style: none;
+  margin: 0 10px;
+  cursor: pointer;
+  width: 260px;
+  height: 70px;
+  border: none;
+  background-color: lightgrey;
+  text-align: left;
+}
+
+.nav-tab span {
+  font-weight: bold;
+  font-size: 14px;
+  max-width: 120px;
+  display: inline-block;
+}
+
+.nav-tab img {
+  width: 32px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.nav-tab:hover {
+  background-color: #ddd;
+}
+
+.nav-tab.active {
+  background-color: #ccc;
 }
