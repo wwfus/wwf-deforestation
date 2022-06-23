@@ -1,6 +1,6 @@
 function IconBlurb(props) {
   return (
-    <div className="icon-blurb">
+    <div className='icon-blurb'>
       <img src={props.imgSrc} alt={props.imgAlt} />
       <p>
         <span>{props.title}</span> {props.text}

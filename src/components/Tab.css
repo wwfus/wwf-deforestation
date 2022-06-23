@@ -1,0 +1,37 @@
+.nav__tab {
+  list-style: none;
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 260px;
+  height: 70px;
+  border: none;
+  background-color: lightgrey;
+  text-align: left;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.nav__tab span {
+  font-weight: bold;
+  font-size: 14px;
+  max-width: 120px;
+  pointer-events: none;
+}
+
+.nav__tab img {
+  width: 32px;
+  height: auto;
+  margin-right: 20px;
+  pointer-events: none;
+}
+
+.nav__tab:hover {
+  background-color: #ddd;
+}
+
+.nav__tab.active {
+  background-color: blue;
+}
