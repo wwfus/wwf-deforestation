@@ -1,27 +1,31 @@
-import Blurb from '../components/Blurb';
+import Blurb from "../components/Blurb";
+
+import "./Page.css";
 
 // import images
-import imgEbolaChart from '../images/ebola-chart.png';
-import imgEbolaMap from '../images/ebola-map.png';
-import imgFarming from '../images/drivers-farming.png';
-import imgFuelwood from '../images/drivers-fuelwood.png';
-import imgMining from '../images/drivers-mining.png';
-import imgTimber from '../images/drivers-timber.png';
+import imgEbolaChart from "../images/ebola-chart.png";
+import imgEbolaMap from "../images/ebola-map.png";
+import imgFarming from "../images/drivers-farming.png";
+import imgFuelwood from "../images/drivers-fuelwood.png";
+import imgMining from "../images/drivers-mining.png";
+import imgTimber from "../images/drivers-timber.png";
 
 function EbolaPage() {
   return (
-    <div className='ebola-page'>
-      <h2>Ebola and West Africa</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquam ut
-        turpis pharetra rhoncus hendrerit. Risus, purus, nisi ipsum in laoreet.
-        Turpis aliquam sagittis, est dictum aenean amet. Vitae nibh vulputate
-        orci nisi. Quis posuere eu laoreet ullamcorper at semper nascetur mi.
-        Mattis pharetra arcu tincidunt quam risus. Est vitae at donec elementum,
-        porttitor tristique laoreet neque scelerisque.
-      </p>
+    <div className="page-content">
+      <header>
+        <h2>Ebola and West Africa</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquam
+          ut turpis pharetra rhoncus hendrerit. Risus, purus, nisi ipsum in
+          laoreet. Turpis aliquam sagittis, est dictum aenean amet. Vitae nibh
+          vulputate orci nisi. Quis posuere eu laoreet ullamcorper at semper
+          nascetur mi. Mattis pharetra arcu tincidunt quam risus. Est vitae at
+          donec elementum, porttitor tristique laoreet neque scelerisque.
+        </p>
+      </header>
 
-      <div className='callout-section'>
+      <div className="callout-section">
         <h3>Region Disease Profile</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio tempor
@@ -33,9 +37,9 @@ function EbolaPage() {
           urna est dictum. Velit, et, malesuada et lectus urna vestibulum sed
           massa est. Ut cursus quisque aenean amet.
         </p>
-        <div className='image-container'>
+        <div className="image-container">
           <h4>Ebola Cases in West Africa</h4>
-          <img src={imgEbolaMap} alt='Map of Ebola in West Africa' />
+          <img src={imgEbolaMap} alt="Map of Ebola in West Africa" />
         </div>
         <ul>
           <li>
@@ -49,49 +53,51 @@ function EbolaPage() {
             vulputate iaculis turpis sed dignissim.
           </li>
         </ul>
-        <div className='image-container'>
+        <div className="image-container">
           <h4>
             Total Cases and Deaths <span>as of 04/13/16</span>
           </h4>
-          <img src={imgEbolaMap} alt='Chart of Ebola cases and deaths' />
+          <img src={imgEbolaChart} alt="Chart of Ebola cases and deaths" />
         </div>
       </div>
 
-      <div className='content-section'>
-        <h3>Drivers of Deforestation in West Africa</h3>
-        <p>
-          Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem
-          ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate
-          iaculis turpis sed dignissim.
-        </p>
+      <div className="content-section">
+        <header>
+          <h3>Drivers of Deforestation in West Africa</h3>
+          <p>
+            Aenean eleifend quam commodo neque cursus porta. Donec sit amet
+            lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse
+            vulputate iaculis turpis sed dignissim.
+          </p>
+        </header>
 
         <Blurb
-          title='Smallholder farming'
-          text='Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim.'
+          title="Smallholder farming"
+          text="Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim."
           imgSrc={imgFarming}
-          imgAlt='Smallholder farming icon'
+          imgAlt="Smallholder farming icon"
         />
         <Blurb
-          title='Mining operations'
-          text='Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim.'
+          title="Mining operations"
+          text="Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim."
           imgSrc={imgMining}
-          imgAlt='Mining operations icon'
+          imgAlt="Mining operations icon"
         />
         <Blurb
-          title='Small-scale timber extraction'
-          text='Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim.'
+          title="Small-scale timber extraction"
+          text="Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim."
           imgSrc={imgTimber}
-          imgAlt='Small-scale timber extraction icon'
+          imgAlt="Small-scale timber extraction icon"
         />
         <Blurb
-          title='Fuelwood and charcoal'
-          text='Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim.'
+          title="Fuelwood and charcoal"
+          text="Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis turpis sed dignissim."
           imgSrc={imgFuelwood}
-          imgAlt='Fuelwood and charcoal icon'
+          imgAlt="Fuelwood and charcoal icon"
         />
       </div>
 
-      <div className='content-section'>
+      <div className="content-section">
         <h3>What WWF is Doing</h3>
         <p>
           Semper fames aliquet senectus vulputate porttitor. Tristique lectus

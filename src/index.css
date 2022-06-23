@@ -20,16 +20,23 @@ body {
 
 /* typography */
 
+h1, h2, h3, h4 {
+  margin: 0;
+  line-height: 1.2em;
+}
+
 h1,
 h2 {
   font-family: "WWF", sans-serif;
   font-weight: normal;
+  margin-bottom: 40px;
 }
 
 h3,
 h4 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 h1 {
@@ -59,4 +66,10 @@ p {
 .content {
   display: flex;
   justify-content: center;
+}
+
+/* UI */
+
+button {
+  background-color: #fff;
 }

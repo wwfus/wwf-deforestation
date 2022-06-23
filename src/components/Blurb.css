@@ -1,0 +1,21 @@
+.blurb {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 40px;
+}
+
+.blurb img {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+}
+
+.blurb p {
+  margin: 0;
+}
+
+.blurb span {
+  text-transform: uppercase;
+  color: #0D6B83;
+  font-weight: bold;
+}
