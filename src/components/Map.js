@@ -9,9 +9,9 @@ mapboxgl.accessToken =
 const Map = (props) => {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(-70.9);
-  const [lat, setLat] = useState(42.35);
-  const [zoom, setZoom] = useState(9);
+  const [lng, setLng] = useState(15.274);
+  const [lat, setLat] = useState(0.303);
+  const [zoom, setZoom] = useState(4);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -22,6 +22,29 @@ const Map = (props) => {
       zoom: zoom,
     });
   });
+
+  if (map.current) {
+    if (props.activeTab === "t1") {
+      map.current.flyTo({
+        center: [15.274, 0.303],
+        essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+      });
+    }
+
+    if (props.activeTab === "t2") {
+      map.current.flyTo({
+        center: [-62.905, -6.85],
+        essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+      });
+    }
+
+    if (props.activeTab === "t3") {
+      map.current.flyTo({
+        center: [-77.52, 37.692],
+        essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+      });
+    }
+  }
 
   return (
     <div className="map">

@@ -28,7 +28,7 @@ const Content = (props) => {
 
   return (
     <section className="main-content">
-      <div className="layout-column"><Map /></div>
+      <div className="layout-column"><Map activeTab={props.activeTab} /></div>
       <div className="layout-column">{diseaseContent}</div>
     </section>
   );
