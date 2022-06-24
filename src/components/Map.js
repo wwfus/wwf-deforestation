@@ -17,7 +17,7 @@ const Map = (props) => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/mapbox/streets-v11",
+      style: "mapbox://styles/nickharb/cl4slsuie000l14pp54fxr5zl",
       center: [lng, lat],
       zoom: zoom,
     });
@@ -27,14 +27,16 @@ const Map = (props) => {
     <div className="map">
       <div className="map__container" ref={mapContainer}></div>
       <div className="map__overlay">
-        <div className="map__statistic">52%</div>
-        <div className="map__legend">
-          <div className="map__legend-item">
-            <span></span> Forest Cover as of 2000
-          </div>
-          <div className="map__legend-item">
-            <span></span> Forest Cover as of 2017
-          </div>
+        <div className="map__statistic">
+          <span>52%</span>loss of forest cover since 2011
+        </div>
+      </div>
+      <div className="map__legend">
+        <div className="map__legend-item">
+          <span></span> Forest Cover as of 2000
+        </div>
+        <div className="map__legend-item">
+          <span></span> Forest Cover as of 2017
         </div>
       </div>
     </div>
