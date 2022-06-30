@@ -16,15 +16,15 @@ const Map = (props) => {
   const mapLocations = {
     t1: {
       center: [15.274, 0.303],
-      forestLoss: "52%",
+      forestLoss: "XX%",
     },
     t2: {
       center: [-62.905, -6.85],
-      forestLoss: "32%",
+      forestLoss: "XX%",
     },
     t3: {
       center: [-77.52, 37.692],
-      forestLoss: "22%",
+      forestLoss: "XX%",
     },
   };
 
@@ -37,6 +37,7 @@ const Map = (props) => {
       style: "mapbox://styles/nickharb/cl4slsuie000l14pp54fxr5zl",
       center: [lng, lat],
       zoom: zoom,
+      interactive: false,
     });
   });
 
@@ -53,8 +54,6 @@ const Map = (props) => {
     updateMapLocation(props.activeTab);
     forestCoverLoss = mapLocations[props.activeTab].forestLoss;
   }
-
-
 
   return (
     <div className="map">

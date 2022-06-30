@@ -1,8 +1,10 @@
 .map {
-  position: relative;
-  height: 600px;
+  height: 80vh;
+  min-height: 400px;
   width: 100%;
   background-color: lightgrey;
+  position: sticky;
+  top: 30px;
 }
 
 .map__container {
