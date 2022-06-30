@@ -1,15 +1,20 @@
-import './Header.css';
+import "./Header.css";
 
 const Header = () => {
   return (
     <header className="main-header">
       <h1>Disease and Deforestation</h1>
       <p>
-        Aenean eleifend quam commodo neque cursus porta. Donec sit amet lorem ac
-        dolor tincidunt rhoncus id ultrices augue. Suspendisse vulputate iaculis
-        turpis sed dignissim. Aenean pellentesque risus metus, in sollicitudin
-        augue egestas eu. Proin ac finibus tortor. Curabitur faucibus urna enim,
-        vel placerat lacus porta a. Lorem ipsum dolor sit amet.
+        Approximately half of today’s infectious diseases are zoonotic in
+        origin – meaning they transmit to humans from other animals – including
+        COVID-19, Ebola, Malaria, and Lyme disease. As outbreaks and pandemics
+        threaten global health and economies, scientists are looking at the
+        origins of zoonotic disease and why these spillovers from animals to
+        humans are on the rise. Emerging research shows that land-use, and
+        specifically deforestation, can increase the risk and spread of
+        infectious diseases. Forest loss and fragmentation lead to greater
+        concentrations of disease pathogens and more frequent interactions
+        between animal hosts, vectors, and humans.
       </p>
     </header>
   );
