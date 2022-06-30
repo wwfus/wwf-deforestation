@@ -7,7 +7,6 @@ mapboxgl.accessToken =
   "pk.eyJ1Ijoibmlja2hhcmIiLCJhIjoiY2pucnN4cWloMGJveTNxbjJ4dzg3dGM4eCJ9.YHcYBuehFvoDyGiJr6dBig";
 
 const Map = (props) => {
-  const [forestCoverLoss, setForestCoverLoss] = useState("52%");
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [lng, setLng] = useState(15.274);
@@ -29,6 +28,8 @@ const Map = (props) => {
     },
   };
 
+  let forestCoverLoss = mapLocations[props.activeTab].forestLoss;
+
   useEffect(() => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
@@ -40,9 +41,6 @@ const Map = (props) => {
   });
 
   const updateMapLocation = (currentLocation) => {
-    // change forest cover loss statistic
-    // setForestCoverLoss(mapLocations[currentLocation].forestLoss);
-
     // fly to location
     map.current.flyTo({
       center: mapLocations[currentLocation].center,
@@ -53,7 +51,10 @@ const Map = (props) => {
 
   if (map.current) {
     updateMapLocation(props.activeTab);
+    forestCoverLoss = mapLocations[props.activeTab].forestLoss;
   }
+
+
 
   return (
     <div className="map">

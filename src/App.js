@@ -36,7 +36,7 @@ function App() {
   const [activeTab, setActiveTab] = useState("t1");
 
   const navClickHandler = (id) => {
-    setActiveTab(id);
+    setActiveTab(id); // state passed up from Tab.js
   };
 
   return (
