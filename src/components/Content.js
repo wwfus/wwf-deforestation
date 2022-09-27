@@ -1,10 +1,10 @@
 // import components
 import Map from './Map';
 
-// import pages
-import EbolaPage from '../pages/Ebola';
-import LymePage from '../pages/Lyme';
-import MalariaPage from '../pages/Malaria';
+// import screens
+import EbolaPage from '../screens/Ebola';
+import LymePage from '../screens/Lyme';
+import MalariaPage from '../screens/Malaria';
 
 import './Content.css';
 

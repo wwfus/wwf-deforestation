@@ -12,7 +12,7 @@
   width: 100%;
 }
 
-.map__overlay {
+/* .map__overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -38,7 +38,7 @@
   font-weight: bold;
   line-height: 1;
   margin-bottom: 10px;
-}
+} */
 
 .map__legend {
   margin: 0 -15px;
@@ -56,14 +56,5 @@
 }
 
 .map__legend-item span {
-  display: block;
-  height: 15px;
-  width: 22px;
-  border-radius: 3px;
-  background-color: #A3D6D2;
-  margin-right: 10px;
-}
-
-.map__legend-item:first-of-type span {
-  background-color: #0D6B83;
+  font-weight: bold;
 }
