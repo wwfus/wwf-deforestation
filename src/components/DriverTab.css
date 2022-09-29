@@ -1,0 +1,23 @@
+.driver-tab {
+  list-style: none;
+  padding: 8px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  color: #0D6B83;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  background-color: #F6F5F2;
+  transition: background-color 300ms, color 300ms;
+}
+
+.driver-tab.active:first-of-type {
+  background-color: #0D6B83;
+  color: #A3D6D2;
+}
+
+.driver-tab.active:last-of-type {
+  background-color: #A3D6D2;
+}

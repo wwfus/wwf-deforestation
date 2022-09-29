@@ -1,3 +1,5 @@
+import { useState } from "react";
+import DriverTab from "../components/DriverTab";
 import Blurb from "../components/Blurb";
 
 import "./Page.css";
@@ -11,6 +13,51 @@ import imgMining from "../images/drivers-mining.png";
 import imgTimber from "../images/drivers-timber.png";
 
 function EbolaPage() {
+  const [activeTab, setActiveTab] = useState("primary");
+  let driverContent;
+
+  const tabClickHandler = (id) => {
+    setActiveTab(id); // state passed up from Tab.js
+  };
+
+  if (activeTab === "primary") {
+    driverContent = (
+      <div className="driver-content">
+        <Blurb
+          title="Smallholder farming"
+          text="Expanding agriculture, due to an increased population and shifts in diet, leads to most of the world’s deforestation."
+          imgSrc={imgFarming}
+          imgAlt="Smallholder farming icon"
+        />
+      </div>
+    );
+  }
+
+  if (activeTab === "secondary") {
+    driverContent = (
+      <div className="driver-content">
+        <Blurb
+          title="Mining operations"
+          text="Rich in natural resources, including diamonds, gold, and coltan (used in cell phones), the West African forests are threatened by major mining companies and the unsustainable infrastructure they often bring."
+          imgSrc={imgMining}
+          imgAlt="Mining operations icon"
+        />
+        <Blurb
+          title="Small-scale timber extraction"
+          text="Illegal and unsustainable logging, usually resulting from the demand for cheap wood and paper, is the primary driver of forest degradation."
+          imgSrc={imgTimber}
+          imgAlt="Small-scale timber extraction icon"
+        />
+        <Blurb
+          title="Fuelwood and charcoal"
+          text="Wood and charcoal are popular fuel choices for cooking and heating in many communities. About half of the illegal removal of timber from forests worldwide is thought to be for use as fuelwood."
+          imgSrc={imgFuelwood}
+          imgAlt="Fuelwood and charcoal icon"
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="page-content">
       <header>
@@ -68,30 +115,20 @@ function EbolaPage() {
           <h3>Drivers of Deforestation in West Africa</h3>
         </header>
 
-        <Blurb
-          title="Smallholder farming"
-          text="Expanding agriculture, due to an increased population and shifts in diet, leads to most of the world’s deforestation."
-          imgSrc={imgFarming}
-          imgAlt="Smallholder farming icon"
-        />
-        <Blurb
-          title="Mining operations"
-          text="Rich in natural resources, including diamonds, gold, and coltan (used in cell phones), the West African forests are threatened by major mining companies and the unsustainable infrastructure they often bring."
-          imgSrc={imgMining}
-          imgAlt="Mining operations icon"
-        />
-        <Blurb
-          title="Small-scale timber extraction"
-          text="Illegal and unsustainable logging, usually resulting from the demand for cheap wood and paper, is the primary driver of forest degradation."
-          imgSrc={imgTimber}
-          imgAlt="Small-scale timber extraction icon"
-        />
-        <Blurb
-          title="Fuelwood and charcoal"
-          text="Wood and charcoal are popular fuel choices for cooking and heating in many communities. About half of the illegal removal of timber from forests worldwide is thought to be for use as fuelwood."
-          imgSrc={imgFuelwood}
-          imgAlt="Fuelwood and charcoal icon"
-        />
+        <div className="driver-tabs">
+          <DriverTab
+            type={"primary"}
+            activeTab={activeTab}
+            onTabClick={tabClickHandler}
+          />
+          <DriverTab
+            type={"secondary"}
+            activeTab={activeTab}
+            onTabClick={tabClickHandler}
+          />
+        </div>
+
+        {driverContent}
       </div>
 
       <div className="content-section">
