@@ -42,8 +42,6 @@ const Map = (props) => {
       zoom: zoom,
       interactive: false,
     });
-    // nickharb.15qac1nw - 2017
-    // nickharb.1q04ebua - 2000
 
     map.current.on("load", addMapLayers);
   });
