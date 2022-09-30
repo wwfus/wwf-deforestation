@@ -1,16 +1,61 @@
+import { useState } from "react";
+import DriverTab from "../components/DriverTab";
 import Blurb from "../components/Blurb";
 
 import "./Page.css";
 
-// import images
-import imgLymeChart from "../images/lyme-chart.png";
-import imgForestry from "../images/drivers-forestry.png";
-import imgFires from "../images/drivers-fires.png";
-import imgUrban from "../images/drivers-urban.png";
+// charts
+import imgLymeChart from "../images/lyme-chart.svg";
+
+// primary drivers
+import imgForestry1 from "../images/drivers-forestry-1.svg";
+
+// secondary drivers
+import imgFires2 from "../images/drivers-fires-2.svg";
+import imgUrban2 from "../images/drivers-urban-2.svg";
 
 function LymePage() {
+  const [activeTab, setActiveTab] = useState("primary");
+  let driverContent;
+
+  const tabClickHandler = (id) => {
+    setActiveTab(id); // state passed up from Tab.js
+  };
+
+  if (activeTab === "primary") {
+    driverContent = (
+      <div className="driver-content">
+        <Blurb
+          title="Forestry"
+          text="Poor forest management, illegal logging, and growing demand for forest products contribute to rampant deforestation and degradation."
+          imgSrc={imgForestry1}
+          imgAlt="Forestry icon"
+        />
+      </div>
+    );
+  }
+
+  if (activeTab === "secondary") {
+    driverContent = (
+      <div className="driver-content">
+        <Blurb
+          title="Fires"
+          text="Wildfires around the world are bigger, more intense, and lasting longer than ever before. Each year they destroy or degrade millions of acres of forest around the world."
+          imgSrc={imgFires2}
+          imgAlt="Fires icon"
+        />
+        <Blurb
+          title="Urban expansion"
+          text="As human populations grow and expand from cities to suburbs and exurbs, forest degradation increases and raises the risk of zoonotic spillover."
+          imgSrc={imgUrban2}
+          imgAlt="Urban expansion icon"
+        />
+      </div>
+    );
+  }
+
   return (
-    <div className="page-content">
+    <div className="page-content page-lyme">
       <header>
         <h2>Lyme Disease and the North American Forest</h2>
         <p>
@@ -63,24 +108,20 @@ function LymePage() {
           <h3>Drivers of Deforestation in the North American Forest</h3>
         </header>
 
-        <Blurb
-          title="Forestry"
-          text="Poor forest management, illegal logging, and growing demand for forest products contribute to rampant deforestation and degradation."
-          imgSrc={imgForestry}
-          imgAlt="Forestry icon"
-        />
-        <Blurb
-          title="Fires"
-          text="Wildfires around the world are bigger, more intense, and lasting longer than ever before. Each year they destroy or degrade millions of acres of forest around the world."
-          imgSrc={imgFires}
-          imgAlt="Fires icon"
-        />
-        <Blurb
-          title="Urban expansion"
-          text="As human populations grow and expand from cities to suburbs and exurbs, forest degradation increases and raises the risk of zoonotic spillover."
-          imgSrc={imgUrban}
-          imgAlt="Urban expansion icon"
-        />
+        <div className="driver-tabs">
+          <DriverTab
+            type={"primary"}
+            activeTab={activeTab}
+            onTabClick={tabClickHandler}
+          />
+          <DriverTab
+            type={"secondary"}
+            activeTab={activeTab}
+            onTabClick={tabClickHandler}
+          />
+        </div>
+
+        {driverContent}
       </div>
 
       <div className="content-section">

@@ -1,0 +1,28 @@
+.country-tabs {
+  display: flex;
+  margin: 0 -10px 20px;
+}
+
+.country-tab-wrapper {
+  border-right: 1px solid #02252D;
+}
+
+.country-tab-wrapper:last-of-type {
+  border-right: none;
+}
+
+.country-tab {
+  list-style: none;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 3px solid #fff;
+  transition: border-bottom-color 300ms;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 0 4px;
+}
+
+.country-tab.active {
+  border-bottom-color: #D35C27;
+}

@@ -4,13 +4,17 @@ import Blurb from "../components/Blurb";
 
 import "./Page.css";
 
-// import images
-import imgEbolaChart from "../images/ebola-chart.png";
-import imgEbolaMap from "../images/ebola-map.png";
-import imgFarming from "../images/drivers-farming.png";
-import imgFuelwood from "../images/drivers-fuelwood.png";
-import imgMining from "../images/drivers-mining.png";
-import imgTimber from "../images/drivers-timber.png";
+// charts
+import imgEbolaChart from "../images/ebola-chart.svg";
+import imgEbolaMap from "../images/ebola-map.svg";
+
+// primary drivers
+import imgFarming1 from "../images/drivers-farming-1.svg";
+
+// secondary drivers
+import imgFuelwood2 from "../images/drivers-fuelwood-2.svg";
+import imgMining2 from "../images/drivers-mining-2.svg";
+import imgTimber2 from "../images/drivers-timber-2.svg";
 
 function EbolaPage() {
   const [activeTab, setActiveTab] = useState("primary");
@@ -26,7 +30,7 @@ function EbolaPage() {
         <Blurb
           title="Smallholder farming"
           text="Expanding agriculture, due to an increased population and shifts in diet, leads to most of the world’s deforestation."
-          imgSrc={imgFarming}
+          imgSrc={imgFarming1}
           imgAlt="Smallholder farming icon"
         />
       </div>
@@ -39,19 +43,19 @@ function EbolaPage() {
         <Blurb
           title="Mining operations"
           text="Rich in natural resources, including diamonds, gold, and coltan (used in cell phones), the West African forests are threatened by major mining companies and the unsustainable infrastructure they often bring."
-          imgSrc={imgMining}
+          imgSrc={imgMining2}
           imgAlt="Mining operations icon"
         />
         <Blurb
           title="Small-scale timber extraction"
           text="Illegal and unsustainable logging, usually resulting from the demand for cheap wood and paper, is the primary driver of forest degradation."
-          imgSrc={imgTimber}
+          imgSrc={imgTimber2}
           imgAlt="Small-scale timber extraction icon"
         />
         <Blurb
           title="Fuelwood and charcoal"
           text="Wood and charcoal are popular fuel choices for cooking and heating in many communities. About half of the illegal removal of timber from forests worldwide is thought to be for use as fuelwood."
-          imgSrc={imgFuelwood}
+          imgSrc={imgFuelwood2}
           imgAlt="Fuelwood and charcoal icon"
         />
       </div>
@@ -59,7 +63,7 @@ function EbolaPage() {
   }
 
   return (
-    <div className="page-content">
+    <div className="page-content page-ebola">
       <header>
         <h2>Ebola and West Africa</h2>
         <p>

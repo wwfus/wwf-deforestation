@@ -7,9 +7,9 @@ import Nav from "./components/Nav";
 import Content from "./components/Content";
 
 // import images
-import imgApe from "./images/icon-ape.png";
-import imgMosquito from "./images/icon-mosquito.png";
-import imgTick from "./images/icon-tick.png";
+import imgApe from "./images/icon-ape.svg";
+import imgMosquito from "./images/icon-mosquito.svg";
+import imgTick from "./images/icon-tick.svg";
 
 const NAV_CONTENT = [
   {
