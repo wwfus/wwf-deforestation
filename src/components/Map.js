@@ -33,7 +33,7 @@ const Map = (props) => {
     },
   };
 
-  let forestCoverLoss = mapLocations[activeTab].forestLoss;
+  // let forestCoverLoss = mapLocations[activeTab].forestLoss;
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -115,7 +115,7 @@ const Map = (props) => {
 
   if (map.current) {
     updateMapLocation(activeTab);
-    forestCoverLoss = mapLocations[activeTab].forestLoss;
+    // forestCoverLoss = mapLocations[activeTab].forestLoss;
   }
 
   return (
