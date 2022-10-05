@@ -1,5 +1,5 @@
-// import react
 import { useState } from "react";
+import useWindowDimensions from "./hooks/useWindowDimensions";
 
 // import components
 import Header from "./components/Header";
@@ -11,21 +11,21 @@ import imgApe from "./images/icon-ape.svg";
 import imgMosquito from "./images/icon-mosquito.svg";
 import imgTick from "./images/icon-tick.svg";
 
-const NAV_CONTENT = [
+const navContent = [
   {
-    id: "t1",
+    id: "ebola",
     title: "Ebola & West Africa",
     imgSrc: imgApe,
     imgAlt: "Ape image",
   },
   {
-    id: "t2",
+    id: "malaria",
     title: "Malaria & The Amazon",
     imgSrc: imgMosquito,
     imgAlt: "Mosquito image",
   },
   {
-    id: "t3",
+    id: "lyme",
     title: "Lyme Disease & the North American Forest",
     imgSrc: imgTick,
     imgAlt: "Tick image",
@@ -33,7 +33,8 @@ const NAV_CONTENT = [
 ];
 
 function App() {
-  const [activeTab, setActiveTab] = useState("t1");
+  const [activeTab, setActiveTab] = useState("ebola");
+  const isMobile = useWindowDimensions()["width"] < 768 ? true : false;
 
   const navClickHandler = (id) => {
     setActiveTab(id); // state passed up from Tab.js
@@ -43,12 +44,13 @@ function App() {
     <main className="App">
       <Header />
       <Nav
-        navContent={NAV_CONTENT}
+        navContent={navContent}
         activeTab={activeTab}
         onNavClick={navClickHandler}
+        isMobile={isMobile}
       />
       <div className="content">
-        <Content activeTab={activeTab} />
+        <Content activeTab={activeTab} isMobile={isMobile} />
       </div>
     </main>
   );

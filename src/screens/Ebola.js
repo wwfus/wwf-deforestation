@@ -64,7 +64,7 @@ function EbolaPage() {
 
   return (
     <div className="page-content page-ebola">
-      <header>
+      <header className="page-header">
         <h2>Ebola and West Africa</h2>
         <p>
           Ebola is a rare but severe and often fatal disease, with a mortality

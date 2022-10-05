@@ -5,12 +5,23 @@
 
 .main-header h1 {
   color: #ffffff;
-  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .main-header h1 {
+    text-align: center;
+  }
 }
 
 .main-header p {
   color: #ffffff;
-  font-size: 18px;
   max-width: 860px;
   margin: 0 auto 60px;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .main-header p {
+    font-size: 18px;
+  }
 }

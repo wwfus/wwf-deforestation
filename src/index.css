@@ -15,12 +15,21 @@ body {
   font-size: 16px;
   color: #000000;
   line-height: 1.5;
+  letter-spacing: 0.01em;
   margin: 0;
 }
 
 /* typography */
 
-h1, h2, h3, h4 {
+p {
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   line-height: 1.2em;
 }
@@ -40,25 +49,50 @@ h4 {
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 42px;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 52px;
+  }
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 38px;
+  letter-spacing: 0.015em;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 44px;
+  }
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 18px;
+  letter-spacing: 0.01em;
   color: #d35c27;
 }
 
+@media (min-width: 768px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
 h4 {
-  font-size: 18px;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  margin-top: 30px;
   color: #02252d;
 }
 
-p {
-  font-size: 16px;
+@media (min-width: 768px) {
+  h4 {
+    font-size: 17px;
+  }
 }
 
 /* app container */
@@ -72,4 +106,17 @@ p {
 
 button {
   background-color: #fff;
+}
+
+.MuiFormLabel-root {
+  background-color: white;
+  padding: 0 7px 0 0 !important;
+}
+
+.MuiBox-root {
+  width: 100% !important;
+}
+
+.MuiInputBase-root {
+  text-align: left !important;
 }

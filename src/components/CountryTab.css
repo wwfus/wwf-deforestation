@@ -1,10 +1,12 @@
 .country-tabs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 -10px 20px;
 }
 
 .country-tab-wrapper {
   border-right: 1px solid #02252D;
+  margin-bottom: 5px;
 }
 
 .country-tab-wrapper:last-of-type {

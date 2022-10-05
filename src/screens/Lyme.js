@@ -56,7 +56,7 @@ function LymePage() {
 
   return (
     <div className="page-content page-lyme">
-      <header>
+      <header className="page-header">
         <h2>Lyme Disease and the North American Forest</h2>
         <p>
           Each year, approximately 30,000 cases of Lyme disease are reported in

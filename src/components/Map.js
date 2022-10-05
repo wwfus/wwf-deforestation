@@ -10,37 +10,41 @@ mapboxgl.accessToken =
 const Map = (props) => {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(15.274);
-  const [lat, setLat] = useState(0.303);
-  const [zoom, setZoom] = useState(4);
   const [checked2000, setChecked2000] = useState(true);
   const [checked2017, setChecked2017] = useState(true);
+  const mapIsInteractive = !props.isMobile;
+  const activeTab = props.activeTab;
 
   const mapLocations = {
-    t1: {
-      center: [15.274, 0.303],
+    ebola: {
+      center: [19, -3],
+      zoom: 4,
       forestLoss: "XX%",
     },
-    t2: {
-      center: [-62.905, -6.85],
+    malaria: {
+      center: [-62, -6],
+      zoom: 4,
       forestLoss: "XX%",
     },
-    t3: {
-      center: [-77.52, 37.692],
+    lyme: {
+      center: [-80, 37],
+      zoom: 5,
       forestLoss: "XX%",
     },
   };
 
-  let forestCoverLoss = mapLocations[props.activeTab].forestLoss;
+  let forestCoverLoss = mapLocations[activeTab].forestLoss;
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/nickharb/cl4slsuie000l14pp54fxr5zl",
-      center: [lng, lat],
-      zoom: zoom,
-      interactive: false,
+      center: mapLocations[activeTab].center,
+      maxZoom: 6,
+      minZoom: 2,
+      zoom: mapLocations[activeTab].zoom,
+      interactive: mapIsInteractive,
     });
 
     map.current.on("load", addMapLayers);
@@ -82,7 +86,7 @@ const Map = (props) => {
     // fly to location
     map.current.flyTo({
       center: mapLocations[currentLocation].center,
-      zoom: 4,
+      zoom: mapLocations[currentLocation].zoom,
       essential: true, // this animation is considered essential with respect to prefers-reduced-motion
     });
   };
@@ -110,8 +114,8 @@ const Map = (props) => {
   };
 
   if (map.current) {
-    updateMapLocation(props.activeTab);
-    forestCoverLoss = mapLocations[props.activeTab].forestLoss;
+    updateMapLocation(activeTab);
+    forestCoverLoss = mapLocations[activeTab].forestLoss;
   }
 
   return (

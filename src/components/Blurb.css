@@ -12,6 +12,13 @@
 
 .blurb p {
   margin: 0;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .blurb p {
+    font-size: 15px;
+  }
 }
 
 .blurb span {

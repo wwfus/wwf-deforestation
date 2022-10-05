@@ -1,34 +1,33 @@
 // import components
-import Map from './Map';
+import Map from "./Map";
 
 // import screens
-import EbolaPage from '../screens/Ebola';
-import LymePage from '../screens/Lyme';
-import MalariaPage from '../screens/Malaria';
+import EbolaPage from "../screens/Ebola";
+import LymePage from "../screens/Lyme";
+import MalariaPage from "../screens/Malaria";
 
-import './Content.css';
+import "./Content.css";
 
 const Content = (props) => {
+  let diseaseContent = <p>Loading...</p>;
 
-  let diseaseContent = (
-    <p>Loading...</p>
-  );
-
-  if (props.activeTab === 't1') {
-    diseaseContent = <EbolaPage />
+  if (props.activeTab === "ebola") {
+    diseaseContent = <EbolaPage />;
   }
 
-  if (props.activeTab === 't2') {
-    diseaseContent = <MalariaPage />
+  if (props.activeTab === "malaria") {
+    diseaseContent = <MalariaPage />;
   }
 
-  if (props.activeTab === 't3') {
-    diseaseContent = <LymePage />
+  if (props.activeTab === "lyme") {
+    diseaseContent = <LymePage />;
   }
 
   return (
     <section className="main-content">
-      <div className="layout-column"><Map activeTab={props.activeTab} /></div>
+      <div className="layout-column">
+        <Map activeTab={props.activeTab} isMobile={props.isMobile} />
+      </div>
       <div className="layout-column">{diseaseContent}</div>
     </section>
   );

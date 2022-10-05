@@ -264,7 +264,7 @@ function MalariaPage() {
 
   return (
     <div className="page-content page-malaria">
-      <header>
+      <header className="page-header">
         <h2>Malaria and the Amazon</h2>
         <p>
           Malaria affected 228 million people globally in 2018 and resulted in

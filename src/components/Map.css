@@ -1,10 +1,18 @@
 .map {
-  height: 80vh;
-  min-height: 400px;
+  height: 500px;
   width: 100%;
   background-color: lightgrey;
-  position: sticky;
-  top: 30px;
+  margin-bottom: 100px;
+}
+
+@media (min-width: 768px) {
+  .map {
+    height: 80vh;
+    min-height: 400px;
+    position: sticky;
+    top: 30px;
+    margin-bottom: 0;
+  }
 }
 
 .map__container {
@@ -61,7 +69,7 @@
 }
 
 .map__legend-item:first-of-type .MuiButtonBase-root.Mui-checked {
-  color: #0D6B83 !important;
+  color: #0d6b83 !important;
 }
 
 .map__legend-item:first-of-type .MuiButtonBase-root.Mui-checked:hover {
@@ -69,7 +77,7 @@
 }
 
 .map__legend-item:last-of-type .MuiButtonBase-root.Mui-checked {
-  color: #A3D6D2 !important;
+  color: #a3d6d2 !important;
 }
 
 .map__legend-item:last-of-type .MuiButtonBase-root.Mui-checked:hover {

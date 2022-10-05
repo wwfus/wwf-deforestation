@@ -1,7 +1,8 @@
 .driver-tab {
   list-style: none;
-  padding: 8px 20px;
+  padding: 8px 12px;
   margin-right: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
   border: none;
   border-radius: 20px;
@@ -11,6 +12,12 @@
   letter-spacing: 0.05em;
   background-color: #F6F5F2;
   transition: background-color 300ms, color 300ms;
+}
+
+@media (min-width: 768px) {
+  .driver-tab {
+    padding: 8px 20px;
+  }
 }
 
 .driver-tab.active:first-of-type {
