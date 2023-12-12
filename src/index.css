@@ -28,7 +28,7 @@
 
 /* base styles */
 
-body {
+.App {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #000000;
@@ -39,68 +39,68 @@ body {
 
 /* typography */
 
-p {
+.App p {
   font-size: 16px;
   letter-spacing: 0.01em;
 }
 
-h1,
-h2,
-h3,
-h4 {
+.App h1,
+.App h2,
+.App h3,
+.App h4 {
   margin: 0;
   line-height: 1.2em;
 }
 
-h1,
-h2 {
+.App h1,
+.App h2 {
   font-family: "WWF", sans-serif;
   font-weight: normal;
   margin-bottom: 40px;
 }
 
-h3,
-h4 {
+.App h3,
+.App h4 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-h1 {
+.App h1 {
   font-size: 42px;
   letter-spacing: 0.02em;
 }
 
 @media (min-width: 768px) {
-  h1 {
+  .App h1 {
     font-size: 52px;
   }
 }
 
-h2 {
+.App h2 {
   font-size: 38px;
   letter-spacing: 0.015em;
 }
 
 @media (min-width: 768px) {
-  h2 {
+  .App h2 {
     font-size: 44px;
   }
 }
 
-h3 {
+.App h3 {
   font-size: 18px;
   letter-spacing: 0.01em;
   color: #d35c27;
 }
 
 @media (min-width: 768px) {
-  h3 {
+  .App h3 {
     font-size: 20px;
   }
 }
 
-h4 {
+.App h4 {
   font-size: 16px;
   letter-spacing: 0.01em;
   margin-top: 30px;
@@ -108,21 +108,21 @@ h4 {
 }
 
 @media (min-width: 768px) {
-  h4 {
+  .App h4 {
     font-size: 17px;
   }
 }
 
 /* app container */
 
-.content {
+.App .content {
   display: flex;
   justify-content: center;
 }
 
 /* UI */
 
-button {
+.App button {
   background-color: #fff;
 }
 

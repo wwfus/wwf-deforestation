@@ -1,4 +1,4 @@
-.driver-tab {
+.App .driver-tab {
   font-family: 'Open Sans', sans-serif;
   list-style: none;
   padding: 8px 12px;
@@ -16,17 +16,17 @@
 }
 
 @media (min-width: 768px) {
-  .driver-tab {
+  .App .driver-tab {
     padding: 8px 20px;
   }
 }
 
-.driver-tab.active:first-of-type {
+.App .driver-tab.active:first-of-type {
   background-color: #0D6B83;
   color: #f6f5f2;
 }
 
-.driver-tab.active:last-of-type {
+.App .driver-tab.active:last-of-type {
   background-color: #A3D6D2;
   color: #000
 }

@@ -1,19 +1,19 @@
-.country-tabs {
+.App .country-tabs {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px 20px;
 }
 
-.country-tab-wrapper {
+.App .country-tab-wrapper {
   border-right: 1px solid #02252D;
   margin-bottom: 5px;
 }
 
-.country-tab-wrapper:last-of-type {
+.App .country-tab-wrapper:last-of-type {
   border-right: none;
 }
 
-.country-tab {
+.App .country-tab {
   font-family: 'Open Sans', sans-serif;
   list-style: none;
   margin: 0 10px;
@@ -26,6 +26,6 @@
   padding: 0 0 4px;
 }
 
-.country-tab.active {
+.App .country-tab.active {
   border-bottom-color: #D35C27;
 }

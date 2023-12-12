@@ -1,4 +1,4 @@
-.map {
+.App .map {
   height: 500px;
   width: 100%;
   background-color: lightgrey;
@@ -6,7 +6,7 @@
 }
 
 @media (min-width: 768px) {
-  .map {
+  .App .map {
     height: 80vh;
     min-height: 400px;
     position: sticky;
@@ -15,7 +15,7 @@
   }
 }
 
-.map__container {
+.App .map__container {
   height: 100%;
   width: 100%;
 }
@@ -48,48 +48,48 @@
   margin-bottom: 10px;
 } */
 
-.map__legend {
+.App .map__legend {
   margin: 0 -10px;
   margin-top: 10px;
 }
 
-.map__legend .map__legend_formGroup {
+.App .map__legend .map__legend_formGroup {
   display: flex;
   flex-direction: row;
 }
 
-.map__legend-item {
+.App .map__legend-item {
   margin: 0 10px;
   color: #000;
   display: flex;
   align-items: center;
 }
 
-.map__legend-item span {
+.App .map__legend-item span {
   font-weight: bold;
   font-size: 14px;
 }
 
-.map__legend-item:first-of-type .MuiButtonBase-root.Mui-checked {
+.App .map__legend-item:first-of-type .MuiButtonBase-root.Mui-checked {
   color: #0d6b83 !important;
 }
 
-.map__legend-item:first-of-type .MuiButtonBase-root.Mui-checked:hover {
+.App .map__legend-item:first-of-type .MuiButtonBase-root.Mui-checked:hover {
   background-color: rgba(13, 107, 131, 0.07) !important;
 }
 
-.map__legend-item:last-of-type .MuiButtonBase-root.Mui-checked {
+.App .map__legend-item:last-of-type .MuiButtonBase-root.Mui-checked {
   color: #a3d6d2 !important;
 }
 
-.map__legend-item:last-of-type .MuiButtonBase-root.Mui-checked:hover {
+.App .map__legend-item:last-of-type .MuiButtonBase-root.Mui-checked:hover {
   background-color: rgba(163, 214, 210, 0.16) !important;
 }
 
-.map__legend-item:first-of-type .MuiSwitch-track {
+.App .map__legend-item:first-of-type .MuiSwitch-track {
   background-color: rgba(13, 107, 131, 0.7) !important;
 }
 
-.map__legend-item:last-of-type .MuiSwitch-track {
+.App .map__legend-item:last-of-type .MuiSwitch-track {
   background-color: rgba(163, 214, 210, 1) !important;
 }

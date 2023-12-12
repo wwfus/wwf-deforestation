@@ -1,19 +1,19 @@
-.main-header {
+.App .main-header {
   background-color: #02252d;
   padding: 20px;
 }
 
-.main-header h1 {
+.App .main-header h1 {
   color: #ffffff;
 }
 
 @media (min-width: 768px) {
-  .main-header h1 {
+  .App .main-header h1 {
     text-align: center;
   }
 }
 
-.main-header p {
+.App .main-header p {
   color: #ffffff;
   max-width: 860px;
   margin: 0 auto 60px;
@@ -21,7 +21,7 @@
 }
 
 @media (min-width: 768px) {
-  .main-header p {
+  .App .main-header p {
     font-size: 18px;
   }
 }
