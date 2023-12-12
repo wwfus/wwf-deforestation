@@ -1,4 +1,5 @@
 .driver-tab {
+  font-family: 'Open Sans', sans-serif;
   list-style: none;
   padding: 8px 12px;
   margin-right: 10px;
@@ -22,9 +23,10 @@
 
 .driver-tab.active:first-of-type {
   background-color: #0D6B83;
-  color: #A3D6D2;
+  color: #f6f5f2;
 }
 
 .driver-tab.active:last-of-type {
   background-color: #A3D6D2;
+  color: #000
 }
