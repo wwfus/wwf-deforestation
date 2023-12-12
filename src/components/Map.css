@@ -50,10 +50,12 @@
 
 .map__legend {
   margin: 0 -10px;
-  margin-left: -20px;
-  display: flex;
-  justify-content: left;
   margin-top: 10px;
+}
+
+.map__legend .map__legend_formGroup {
+  display: flex;
+  flex-direction: row;
 }
 
 .map__legend-item {
@@ -61,11 +63,11 @@
   color: #000;
   display: flex;
   align-items: center;
-  font-size: 14px;
 }
 
 .map__legend-item span {
   font-weight: bold;
+  font-size: 14px;
 }
 
 .map__legend-item:first-of-type .MuiButtonBase-root.Mui-checked {

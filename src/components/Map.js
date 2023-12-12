@@ -1,4 +1,6 @@
 import { useRef, useEffect, useState } from "react";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 
@@ -121,20 +123,15 @@ const Map = (props) => {
   return (
     <div className="map">
       <div className="map__container" ref={mapContainer}></div>
-      {/* <div className="map__overlay">
-        <div className="map__statistic">
-          <span>{forestCoverLoss}</span>loss of forest cover since 2011
-        </div>
-      </div> */}
       <div className="map__legend">
-        <div className="map__legend-item">
-          <Switch checked={checked2000} onChange={handleChange2000} />
-          <span>Forest Cover as of 2000</span>
-        </div>
-        <div className="map__legend-item">
-          <Switch checked={checked2017} onChange={handleChange2017} />
-          <span>Forest Cover as of 2017</span>
-        </div>
+        <FormGroup className="map__legend_formGroup">
+            <div className="map__legend-item">
+              <FormControlLabel control={<Switch checked={checked2000} onChange={handleChange2000} />} label="Forest Cover as of 2000" />
+            </div>
+            <div className="map__legend-item">
+              <FormControlLabel control={<Switch checked={checked2017} onChange={handleChange2017} />} label="Forest Cover as of 2017" />
+            </div>
+        </FormGroup>
       </div>
     </div>
   );
