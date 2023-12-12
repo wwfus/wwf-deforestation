@@ -2,6 +2,7 @@
   "name": "wwf-deforestation",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://files.worldwildlife.org/wwfcmsprod/misc/disease_and_deforestation",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
