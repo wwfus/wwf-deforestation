@@ -13,6 +13,10 @@
   border-right: none;
 }
 
+.App .country-tab-wrapper button {
+  color: #000;
+}
+
 .App .country-tab {
   font-family: 'Open Sans', sans-serif;
   list-style: none;
