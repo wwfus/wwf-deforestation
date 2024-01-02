@@ -2,6 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project specific deployment instructions
+
+These project file are hosted on WWF's file share: files.worldwildlife.org. In order to ensure all links and images work, please:
+
+a. Ensure that images or svgs start with "static/media/IMAGE_NAME" where "IMAGE_NAME" is subsituted with the image name.
+b. Ensure all other links or file start with "https://files.worldwildlife.org/wwfcmsprod/misc/disease_and_deforestation".
+
+After running `npm run build` you may need to swap these urls before any new files are uploaded to the file share.
+
+Extra tip: I find that editing this through VSCode applies auto formatting which can break the files. To prevent this, you can usje textpad, notepad, or VIM.
+
 ## Available Scripts
 
 In the project directory, you can run:
