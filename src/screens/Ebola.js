@@ -113,6 +113,9 @@ function EbolaPage() {
           </h4>
           <img src={imgEbolaChart} alt="Chart of Ebola cases and deaths" />
         </div>
+        <cite>
+          2014-2016 Ebola Outbreak in West Africa. (n.d.). Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/vhf/ebola/history/2014-2016-outbreak/index.html" target="_blank" rel="noreferrer">https://www.cdc.gov/vhf/ebola/history/2014-2016-outbreak/index.html</a>
+        </cite>
       </div>
 
       <div className="content-section">

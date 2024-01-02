@@ -309,6 +309,7 @@ function MalariaPage() {
             alt="Map of Malaria in the Brazilian Amazon"
           />
         </div>
+        <cite>MacDonald, A. J., & Mordecai, E. A. (2019). Amazon deforestation drives malaria transmission, and malaria burden reduces forest clearing. Proceedings of the National Academy of Sciences, 116(44), 22212. <a href="https://doi.org/10.1073/pnas.1905315116" target="_blank" rel="noreferrer">https://doi.org/10.1073/pnas.1905315116</a></cite>
       </div>
 
       <div className="content-section">

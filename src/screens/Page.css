@@ -16,6 +16,16 @@
   margin: 0 -20px 60px;
 }
 
+.App .callout-section cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.App .callout-section ul {
+  margin-top: 2rem
+}
+
 @media (min-width: 768px) {
   .App .callout-section {
     padding: 40px;

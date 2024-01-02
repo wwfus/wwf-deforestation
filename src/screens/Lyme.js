@@ -102,6 +102,9 @@ function LymePage() {
             alt="Map of Lyme Disease in the United States"
           />
         </div>
+        <cite>
+        Lyme Disease: Data and Surveillance. (n.d.). Centers for Disease Control and Prevention. <a href="https://www.cdc.gov/lyme/datasurveillance/index.html" target="_blank" rel="noreferrer">https://www.cdc.gov/lyme/datasurveillance/index.html</a>
+        </cite>
       </div>
 
       <div className="content-section">
